@@ -125,7 +125,7 @@
         text-align: center;
     }
 
-    h3, p, .projects-middle-left {
+    h3, p, .projects.middle.left {
         color: #293241;
     }
 
@@ -133,7 +133,7 @@
         color: #e0fbfc
     }
 
-    .projects-middle-right  {
+    .projects.middle.right  {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -279,63 +279,63 @@
             border: none;
         }
 
-       .three-top-left {
+       .landing.top.left {
             grid-area: top-left;
         }
 
-       .three-top-right {
+       .landing.top.right {
             grid-area: top-right;
         }
 
-       .three-middle-left {
+        .landing.middle.left {
             grid-area: middle-left;
         }
     
-       .three-middle-right {
+       .landing.middle.right{
             grid-area: middle-right;
             padding: 0.5em;
         }
 
-       .three-bottom-left {
+       .landing.bottom.left {
             grid-area: bottom-left;
         }
 
-       .three-bottom-right {
+       .landing.bottom.right {
             grid-area: bottom-right;
         }
     
-       .three-left, .about-left {
+       .landing.left, .about.left {
             background-color: #EE6C4D;
         }
     
-       .three-right, .about-right {
+       .landing.right, .about.right {
             background-color: #293241;
         }
     
-        .three-top-left, .three-middle-left, .about-top-left {
+        .landing.top.left, .landing.middle.left, .about.top.left {
             border-bottom: 3px solid #293241;
         }
     
-        .three-middle-left, .about-middle-left, .contact-middle-left {
+        .landing.middle.left, .about.middle.left, .contact.middle.left {
             display: flex;
             align-items: center;
         }
     
-        .three-bottom-right, .about-bottom-right {
+        .landing.bottom.right, .about.bottom.right {
             display: flex;
             align-items: center;
             justify-content: center;
         }
     
-        .three-top-right, .three-middle-right, .about-top-right {
+        .landing.top.right, .landing.middle.right, .about.top.right {
             border-bottom: 3px solid #EE6C4D;
         }
 
-        .about-middle-right, .projects-right {
+        .about.middle.right, .projects.right {
             border-left: 3px solid #e0fbfc;
         }
 
-        .projects-top {
+        .projects.top {
             border-bottom: 3px solid #293241;
         }
 
@@ -343,12 +343,12 @@
             padding-top: 1rem
         }
 
-        .projects-middle-left h3, p {
+        .projects.middle.left h3, p {
             padding: 1rem;
             text-align: left;
         }
 
-        .projects-middle-left h3 {
+        .projects.middle.left h3 {
             font-size: 1.2rem;
             margin: 0;
         }
@@ -362,7 +362,7 @@
             display: none;
         }
 
-        .contact-left {
+        .contact.left {
             background-color: #293241;
             color: #e0fbfc;
         }
@@ -371,24 +371,24 @@
             color: #e0fbfc;
         }
     
-        .contact-right {
+        .contact.right {
             background-color: #e0fbfc;
             color: #293241;
         }
 
-        .contact-right {
+        .contact.right {
             border-left: 3px solid #e0fbfc;
         }
 
-        .contact-top-right, .contact-middle-right {
+        .contact.top.right, .contact.middle.right {
             border-bottom: 3px solid #293241;
         }
 
-        .contact-top-left, .contact-middle-left {
-            border-bottom: 3px solid #e0fbfc
+        .contact.top.left, .contact.middle.left {
+            border-bottom: 3px solid #e0fbfc;
         }
 
-        .contact-middle-right {
+        .contact.middle.right {
             display: flex;
             align-items: center;
             justify-content: center;
