@@ -1,4 +1,4 @@
-const fullPage = document.querySelector('#full-page-wrapper');
+const fullPage = document.querySelector('body');
 const classes = [   "orange-blue", 
                     "blue-orange", 
                     "blue-orange-bottom", 
@@ -8,10 +8,10 @@ const classes = [   "orange-blue",
                     "blue-white-bottom", 
                     "two-borders"];
 
-const landing = document.querySelector('#full-page-wrapper > section.landing-page-wrapper');
-const about = document.querySelector('#full-page-wrapper > section.about-wrapper');
-const projects = document.querySelector('#full-page-wrapper > section.projects1-wrapper');
-const contact = document.querySelector('#full-page-wrapper > section.contact-wrapper');
+const landing = document.querySelector('body > section.landing-page-wrapper');
+const about = document.querySelector('body > section.about-wrapper');
+const projects = document.querySelector('body > section.projects1-wrapper');
+const contact = document.querySelector('body > section.contact-wrapper');
 
 const addRemoveClasses = function() {
 
@@ -65,10 +65,10 @@ const addRemoveClasses = function() {
     if (window.innerWidth >= 900) {
 
         if (landing.getBoundingClientRect()["y"] == 0) {
-            document.querySelector('.landing.top.left').classList.add('orange-blue');
-            document.querySelector('.landing.middle.left').classList.add('orange-blue');
-            document.querySelector('.landing.top.right').classList.add('blue-orange-bottom');
-            document.querySelector('.landing.middle.right').classList.add('blue-orange-bottom');
+            document.querySelector('.landing:nth-child(1)').classList.add('orange-blue');
+            document.querySelector('.landing:nth-child(3)').classList.add('orange-blue');
+            document.querySelector('.landing:nth-child(2)').classList.add('blue-orange-bottom');
+            document.querySelector('.landing:nth-child(4)').classList.add('blue-orange-bottom');
 
             [...aboutDivs, ...projectsDivs, ...contactDivs].forEach(borderClass => {
                     for (let i = 0; i < classes.length; i++){
@@ -78,9 +78,9 @@ const addRemoveClasses = function() {
         }
 
         if (about.getBoundingClientRect()["y"] == 0){
-            document.querySelector('.about.top.left').classList.add('orange-blue');
-            document.querySelector('.about.middle.right').classList.add('blue-white');
-            document.querySelector('.about.top.right').classList.add('blue-orange-bottom');
+            document.querySelector('.about:nth-child(1)').classList.add('orange-blue');
+            document.querySelector('.about:nth-child(4)').classList.add('blue-white');
+            document.querySelector('.about:nth-child(2)').classList.add('blue-orange-bottom');
 
             [...landingDivs, ...projectsDivs, ...contactDivs].forEach(borderClass => {
                     for (let i = 0; i < classes.length; i++){
@@ -90,9 +90,9 @@ const addRemoveClasses = function() {
         }
 
         if (projects.getBoundingClientRect()["y"] == 0){
-            document.querySelector('.projects.top.left').classList.add('orange-blue');
-            document.querySelector('.projects.middle.right').classList.add('orange-white');
-            document.querySelector('.projects.top.right').classList.add('two-borders');
+            document.querySelector('.projects:nth-child(1)').classList.add('orange-blue');
+            document.querySelector('.projects:nth-child(4)').classList.add('orange-white');
+            document.querySelector('.projects:nth-child(2)').classList.add('two-borders');
 
             [...landingDivs, ...aboutDivs, ...contactDivs].forEach(borderClass => {
                 for (let i = 0; i < classes.length; i++){
@@ -102,10 +102,10 @@ const addRemoveClasses = function() {
         }
 
         if (contact.getBoundingClientRect()["y"] == 0){
-            document.querySelector('.contact.top.left').classList.add('blue-white-bottom');
-            document.querySelector('.contact.middle.left').classList.add('blue-white-bottom');
-            document.querySelector('.contact.top.right').classList.add('white-blue');
-            document.querySelector('.contact.middle.right').classList.add('white-blue');
+            document.querySelector('.contact:nth-child(1)').classList.add('blue-white-bottom');
+            document.querySelector('.contact:nth-child(3)').classList.add('blue-white-bottom');
+            document.querySelector('.contact:nth-child(2)').classList.add('white-blue');
+            document.querySelector('.contact:nth-child(4)').classList.add('white-blue');
 
             [...landingDivs, ...aboutDivs, ...projectsDivs].forEach(borderClass => {
                 for (let i = 0; i < classes.length; i++){
@@ -118,6 +118,7 @@ const addRemoveClasses = function() {
 
 const resizeFunction = function() {
     document.querySelectorAll('div, section').forEach(borderClass => {
+        borderClass.removeAttribute('style');
         for (let i = 0; i < classes.length; i++) {
             borderClass.classList.remove(classes[i]);
         }
@@ -133,7 +134,6 @@ const transitionColor = function() {
     let projectsVal = projectsTop / window.innerHeight * 100 - 1.5;
 
     if (window.innerWidth < 900){
-        console.log(aboutVal);
         if (aboutVal < 0) {
             about.setAttribute('style', `background:linear-gradient(180deg, #293241, ${100 - Math.abs(aboutVal)}%, #ee6c4d)`);
         }
