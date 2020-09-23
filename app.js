@@ -1,151 +1,87 @@
-const fullPage = document.querySelector('body');
-const classes = [   "orange-blue", 
-                    "blue-orange", 
-                    "blue-orange-bottom", 
-                    "blue-white", 
-                    "white-blue", 
-                    "orange-white", 
-                    "blue-white-bottom", 
-                    "two-borders"];
+const body = document.querySelector("body");
+const projects = document.querySelectorAll("div.card-container");
+const projectOverlays = document.querySelectorAll(".overlay");
+const modalButton = document.querySelectorAll(".modal-container button, .modal-container");
 
-const landing = document.querySelector('body > section.landing-page-wrapper');
-const about = document.querySelector('body > section.about-wrapper');
-const projects = document.querySelector('body > section.projects1-wrapper');
-const contact = document.querySelector('body > section.contact-wrapper');
+const projectsFade = () => {
+    const projectsSection = document.querySelector(".projects-intro");
+    const projectsHeader = document.querySelector(".projects-intro h2");
+    let position = projectsSection.getBoundingClientRect()["y"];
+    let percent = 100 - (position / window.innerHeight * 100);
 
-const addRemoveClasses = function() {
-
-    const landingDivs = document.querySelectorAll('.landing-page-wrapper > div');
-    const aboutDivs = document.querySelectorAll('.about-wrapper > div');
-    const projectsDivs = document.querySelectorAll('.projects1-wrapper > div');
-    const contactDivs = document.querySelectorAll('.contact-wrapper > div');
-
-    if (window.innerWidth < 900) {
-
-        if (landing.getBoundingClientRect()["y"] == 0){
-            landing.classList.add('blue-orange');
-            [about, projects, contact].forEach(borderClass => {
-                for (let i = 0; i < classes.length; i++){
-                    borderClass.classList.remove(classes[i]);
-                }
-            });
-        }
-
-        if (about.getBoundingClientRect()["y"] == 0){
-            about.classList.add('blue-orange');
-
-            [landing, projects, contact].forEach(borderClass => {
-                for (let i = 0; i < classes.length; i++){
-                    borderClass.classList.remove(classes[i]);
-                }
-            });
-        }
-
-        if (projects.getBoundingClientRect()["y"] == 0){
-            projects.classList.add('orange-white');
-
-            [landing, about, contact].forEach(borderClass => {
-                for (let i = 0; i < classes.length; i++){
-                    borderClass.classList.remove(classes[i]);
-                }
-            });
-        }
-
-        if (contact.getBoundingClientRect()["y"] == 0){
-            contact.classList.add('white-blue');
-
-            [landing, about, projects].forEach(borderClass => {
-                for (let i = 0; i < classes.length; i++){
-                    borderClass.classList.remove(classes[i]);
-                }
-            });
+    if (window.innerWidth <= 992){
+        if (percent > 0 && percent <= 100) {
+            projectsHeader.setAttribute("style", `position: sticky; top: ${window.innerHeight / 2 - 20}px; opacity: ${Math.round(percent)}%;`);
         }
     }
 
-    if (window.innerWidth >= 900) {
-
-        if (landing.getBoundingClientRect()["y"] == 0) {
-            document.querySelector('.landing:nth-child(1)').classList.add('orange-blue');
-            document.querySelector('.landing:nth-child(3)').classList.add('orange-blue');
-            document.querySelector('.landing:nth-child(2)').classList.add('blue-orange-bottom');
-            document.querySelector('.landing:nth-child(4)').classList.add('blue-orange-bottom');
-
-            [...aboutDivs, ...projectsDivs, ...contactDivs].forEach(borderClass => {
-                    for (let i = 0; i < classes.length; i++){
-                        borderClass.classList.remove(classes[i]);
-                    }
-                });
-        }
-
-        if (about.getBoundingClientRect()["y"] == 0){
-            document.querySelector('.about:nth-child(1)').classList.add('orange-blue');
-            document.querySelector('.about:nth-child(4)').classList.add('blue-white');
-            document.querySelector('.about:nth-child(2)').classList.add('blue-orange-bottom');
-
-            [...landingDivs, ...projectsDivs, ...contactDivs].forEach(borderClass => {
-                    for (let i = 0; i < classes.length; i++){
-                        borderClass.classList.remove(classes[i]);
-                    }
-                });
-        }
-
-        if (projects.getBoundingClientRect()["y"] == 0){
-            document.querySelector('.projects:nth-child(1)').classList.add('orange-blue');
-            document.querySelector('.projects:nth-child(4)').classList.add('orange-white');
-            document.querySelector('.projects:nth-child(2)').classList.add('two-borders');
-
-            [...landingDivs, ...aboutDivs, ...contactDivs].forEach(borderClass => {
-                for (let i = 0; i < classes.length; i++){
-                    borderClass.classList.remove(classes[i]);
-                }
-            });
-        }
-
-        if (contact.getBoundingClientRect()["y"] == 0){
-            document.querySelector('.contact:nth-child(1)').classList.add('blue-white-bottom');
-            document.querySelector('.contact:nth-child(3)').classList.add('blue-white-bottom');
-            document.querySelector('.contact:nth-child(2)').classList.add('white-blue');
-            document.querySelector('.contact:nth-child(4)').classList.add('white-blue');
-
-            [...landingDivs, ...aboutDivs, ...projectsDivs].forEach(borderClass => {
-                for (let i = 0; i < classes.length; i++){
-                    borderClass.classList.remove(classes[i]);
-                }
-            });
-        }
-    }
-};
-
-const resizeFunction = function() {
-    document.querySelectorAll('div, section').forEach(borderClass => {
-        borderClass.removeAttribute('style');
-        for (let i = 0; i < classes.length; i++) {
-            borderClass.classList.remove(classes[i]);
-        }
-    });
-    addRemoveClasses();
-};
-
-const transitionColor = function() {
-    let aboutTop = about.getBoundingClientRect()["y"];
-    let aboutVal = aboutTop / window.innerHeight * 100 - 1.5;
-
-    let projectsTop = projects.getBoundingClientRect()["y"];
-    let projectsVal = projectsTop / window.innerHeight * 100 - 1.5;
-
-    if (window.innerWidth < 900){
-        if (aboutVal < 0) {
-            about.setAttribute('style', `background:linear-gradient(180deg, #293241, ${100 - Math.abs(aboutVal)}%, #ee6c4d)`);
-        }
-
-        if (projectsVal < 0) {
-            projects.setAttribute('style', `background:linear-gradient(180deg, #ee6c4d, ${100 - Math.abs(projectsVal)}%, #e0fbfc)`)
+    else {
+        if (percent > 0 && percent <= 100) {
+            projectsHeader.setAttribute("style", `position: sticky; top: 10px; opacity: ${Math.round(percent)}%;`);
         }
     }
 }
 
+const openModal = (e) => {
+    const classes = ["project-one", "project-two", "project-three"];
+    let givenClass;
+    let modal;
 
-addRemoveClasses();
-fullPage.addEventListener('scroll', addRemoveClasses);
-fullPage.addEventListener('scroll', transitionColor);
-window.addEventListener('resize', resizeFunction);
+    classes.forEach(x => {
+        if (e.target.classList.contains(x)){
+            givenClass = x;
+        }
+    });
+    
+    if (window.innerWidth < 768) {
+        modal = document.querySelector(`.${givenClass} div.mobile.modal-container`);
+    }
+
+    else if (window.innerWidth >= 768) {
+        modal = document.querySelector(`.${givenClass} div.desktop.modal-container`);
+    }
+
+    modal.style.visibility = "visible"; 
+}
+
+const closeModal = () => {
+    let modals;
+    if (window.innerWidth < 768) {
+        modals = document.querySelectorAll("div.mobile.modal-container");
+    }
+
+    else if (window.innerWidth >= 768) {
+        modals = document.querySelectorAll("div.desktop.modal-container");
+    }
+    modals.forEach(modal => {
+        modal.style.visibility = "hidden";
+    });
+}
+
+const resize = () => {
+    let modals = document.querySelectorAll("div.mobile.modal-container");
+    if (window.innerWidth >= 768) {
+        modals.forEach(modal => {
+            modal.style.visibility = "visible";
+        });
+    }
+
+    if (window.innerWidth < 768) {
+        modals.forEach(modal => {
+            modal.style.visibility = "hidden";
+        });
+    }
+}
+
+
+window.addEventListener("scroll",  projectsFade);
+window.addEventListener("resize", resize);
+projects.forEach(link => {
+    link.addEventListener("click", openModal)
+});
+projectOverlays.forEach(link => {
+    link.addEventListener("click", openModal)
+});
+modalButton.forEach(button => {
+    button.addEventListener("click", closeModal)
+});

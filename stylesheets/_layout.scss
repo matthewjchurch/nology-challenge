@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: $black;
+    font-size: 16px;
+}
+
+body {
+    overflow: auto;
+    height: 100%;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: $blue;
+}
+
+::-webkit-scrollbar-thumb {
+    background: $black;
+  }
+
+section {
+    padding: $section-padding;
+    display: flex;
+    flex-direction: column;
+    & > * {
+        width: 100%;
+    }
+}
+
+.landing-page {
+    justify-content: center;
+    height: 100vh;
+    background-image: linear-gradient(to bottom, $black 0%, $blue 66%, $black 100%);
+    padding: $section-padding;
+
+    p {
+        margin-top: 5vh;
+        padding: 0.5rem 0;
+        border-top: 3px solid $orange;
+        border-bottom: 3px solid $green;
+    }
+}
+
+.project-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.projects-wrapper {
+    padding: 0px;
+}
+
+.projects-intro {
+    height: 300vh;
+    background-image: linear-gradient(to bottom, $black 40%, $blue 70%, $orange 100%);
+}
+
+.project {
+    position: relative;
+    align-items: center;
+}
+
+section.project-one {
+    background-image: linear-gradient(to bottom, $orange, $green);
+}
+
+section.project-two {
+    background-image: linear-gradient(to bottom, $green, $purple);
+}
+
+section.project-three {
+    background-image: linear-gradient(to bottom, $purple, $blue);
+}
+
+.about {
+    background-image: linear-gradient(to bottom, $blue, $black);
+    padding-bottom: 0;
+    height: 100vh;
+    justify-content: space-around;
+
+    & article:nth-child(2) h2 {
+        display: none;
+    }
+}
+
+footer {
+    height: 5vh;
+    border-top: 3px solid $orange;
+    background-color: transparent;
+}

@@ -1,174 +1,223 @@
-<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Matt Church - Portfolio page</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;500&family=Montserrat:wght@600&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png">
+    <link rel="manifest" href="./assets/site.webmanifest">
+    <script src="https://unpkg.com/scrollreveal@4"></script>
+	<script>
+		ScrollReveal({ duration: 1000 })
+	</script>
+    <script src="https://kit.fontawesome.com/07e47118c6.js" crossorigin="anonymous"></script>
+</head>
 
-<html>
-    <head>
-        <title>Matt Church - Portfolio page</title>
-        <meta charset = "UTF-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="styles.css">
-        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;500&family=Montserrat:wght@600&display=swap" rel="stylesheet">
-    </head>
+<body>
+    <section class="landing-page">
+        <header>
+            <h1>Matt</h1>
+            <h1>Church</h1>
+        </header>
 
-    <body>
-        <section class="split-three landing-page-wrapper">
+        <p>My name is Matt and I'm currently training with _nology in order to become a software engineer. Feel free to scroll down for examples of my work.</p>
+    </section>
 
-            <div class="landing">
-            </div>
+    <main>
+        <section class="projects-wrapper">
+            <header class="projects-intro">
+                <h2>Projects</h2>
+            </header>
 
-            <div class="landing">
-            </div>
-
-            <div class="landing">
-                <p class="intro">My name is Matt and I'm currently training with _nology in order to become a software engineer.
-                </p>
-            </div>
-
-            <div class="landing">
-                <div class="matt-container">
-                    <div></div>
-                    <h1 class="main-typeface matt">Matt</h1>
-                </div>
-
-                <div class="church-container">
-                    <div></div>
-                    <h1 class="main-typeface church">Church</h1> 
-                </div>
-
-            </div>
-            
-            <div class="landing">
-            </div>
-
-            <div class="landing">
-                <h3 class="tagline">Software engineer based in London</h3>
-            </div>
-            
-        </section>
-
-        <section class="about-wrapper split-two">
-
-            <div class="about">
-            </div>
-
-            <div class="about">
-                <h2 class="page-header about-me-header">About</h2>
-            </div>
-
-            <div class="about">
-            </div>
-
-            <div class="about">
-                <p class="about-me-text">For the last couple of years at my current company, I worked as a QA Tester for a digital transformation project.
-                </p><p>
-                The experience led me to an interest in UX, and from there I started to learn to code.
-                </p><p>
-                Although a departure from studying music, I find that there are parallels in that both are abstract forms of language.
-                </p><p>
-                Fundamentally, I get bored if I'm not learning new things, so coding seems like the ideal career in which to do so!
-                </p>
-            </div>
-
-        </section>
-
-        <section class="projects1-wrapper split-two">
-
-            <div class="projects">
-            </div>
-
-            <div class="projects">
-                <h2 class="page-header projects-header">Projects</h2>
-            </div>
-
-            <div class="projects">
-                <h4>Drum machine</h4>
-                <p>One of the first projects I built in preparation of the course.
-                </p><p>
-                I used a constructor method to add classes to each beat, and built functions to visually
-                represent the flow of each beat relative to the chosen tempo.
-                </p><p>
-                Clicking on a beat adds an active class, which means the relevant sound will play when reached in the flow.
-                </p>
-            </div>
-
-            <div class="projects">
-                    
-                <div class="projects-img-container">
-                    <a href="https://github.com/matthewjchurch/drummachine" alt="Link to drum machine project" target="_blank" class="sub-900-link">
-                        <img src="drum-machine.png" alt="Image of my drum machine project" class="project-image"/>
-                    </a>
-
-                    <div class="project-link-container">
+            <section class="project-one project">
+                <div class="mobile modal-container">
+                    <article>
+                        <h4>Drum machine</h4>
+                        <p>One of the first projects I built in preparation of the course.</p>
+                        <p>I used a constructor method to add classes to each beat, and built functions to visually
+                        represent the flow of each beat relative to the chosen tempo.</p>
+                        <p>Clicking on a beat adds an active class, which means the relevant sound will play when reached in the flow.</p>
+                        
                         <ul class="project-links-ul">
                             <li>
                                 <a href="https://github.com/matthewjchurch/drummachine" alt="Link to drum machine project" target="_blank">
-                                    <img src="https://img.icons8.com/material-outlined/96/000000/github.png" alt="GitHub icon" class="project-links"/>
+                                    <i class="fab fa-github-square"></i>
                                 </a>
                             </li>
 
                             <li>
                                 <a href="https://matthewjchurch.github.io/drummachine/" target="_blank">
-                                    <img src="https://img.icons8.com/material-outlined/96/000000/web-design.png" alt="Website icon" class="project-links"/>
+                                    <i class="far fa-window-maximize"></i>
                                 </a>
                             </li>
                         </ul>
+                        <button>close</button>
+                    </article>
+                </div>
+
+                <div class="project-main">
+                    <div class="card-container project-one">
+                        <div class="card project-one">
+                            <h3 class="project-one">Drum machine</h3>
+                            <i class="fas fa-play-circle project-one"></i>
+                            <p class="project-one">Click to see</p>
+                            <div class="pic project-one">
+                                <video height="100%" width="100%" autoplay loop muted>
+                                    <source src="assets/drum-machine.mp4">
+                                </video>
+                            </div>
+                            <button class="project-one">
+                            </button>
+                        </div>
+                    </div>
+
+                <div class="desktop modal-container">
+                    <i class="fas fa-times"></i>
+                    <iframe src="https://matthewjchurch.github.io/drummachine/" frameborder="0"></iframe>
+                </div>
+            </section>
+
+            <section class="project-two project">
+                <div class="mobile modal-container">
+                    <article>
+                        <h4>Calculator</h4>
+                        <p>The first Javascript project I built during my time at _nology.</p>
+                        <p>It can currently handle up to 12 digits precision, and should avoid basic floating point errors.</p>
+                        <p>Modelled after the iPhone calculator app.</p>
+                        <ul class="project-links-ul">
+                            <li>
+                                <a href="https://github.com/matthewjchurch/calculator" alt="Link to calculator project" target="_blank">
+                                    <i class="fab fa-github-square"></i>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="https://matthewjchurch.github.io/calculator/" target="_blank">
+                                    <i class="far fa-window-maximize"></i>
+                                </a>
+                            </li>
+                        </ul>
+                        <button>close</button>
+                    </article>
+                </div>
+
+                <div class="project-main">
+                    <div class="card-container project-two">
+                        <div class="card project-two">
+                            <h3 class="project-two">Calculator</h3>
+                            <i class="fas fa-play-circle project-two"></i>
+                            <p class="project-two">Click to see</p>
+                            <div class="pic project-two">
+                                <video height="100%" width="100%" autoplay loop muted>
+                                    <source src="assets/calculator-video.mp4">
+                                </video>
+                            </div>
+                            <button class="project-two">
+                            </button>
+                        </div>
                     </div>
                 </div>
-            </div>
+
+                <div class="desktop modal-container">
+                    <i class="fas fa-times"></i>
+                    <iframe src="https://matthewjchurch.github.io/calculator/" frameborder="0"></iframe>
+                </div>
+            </section>
+
+            <!-- <section class="project-three project">
+                <div class="mobile modal-container">
+                    <article>
+                        <p>One of the first projects I built in preparation of the course.</p>
+                        <p>I used a constructor method to add classes to each beat, and built functions to visually
+                        represent the flow of each beat relative to the chosen tempo.</p>
+                        <p>Clicking on a beat adds an active class, which means the relevant sound will play when reached in the flow.</p>
+                        <ul class="project-links-ul">
+                            <li>
+                                <a href="https://github.com/matthewjchurch/drummachine" alt="Link to drum machine project" target="_blank">
+                                    <i class="fab fa-github-square"></i>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="https://matthewjchurch.github.io/drummachine/" target="_blank">
+                                    <i class="far fa-window-maximize"></i>
+                                </a>
+                            </li>
+                        </ul>
+                        <button>close</button>
+                    </article>
+                </div>
+
+                <div class="project-main">
+                    <div class="card-container project-three">
+                        <div class="card project-three">
+                            <h3 class="project-three">Drum machine</h3>
+                            <i class="fas fa-play-circle project-three"></i>
+                            <p class="project-three">Click to see</p>
+                            <div class="pic project-three"></div>
+                            <button class="project-three">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="desktop modal-container">
+                    <i class="fas fa-times"></i>
+                    <iframe src="https://streamable.com/e/shil2" frameborder="0"></iframe>
+                </div>
+            </section> -->
         </section>
 
-        
-        <!-- <section class="projects2-wrapper split-two">
-            
-        </section> -->
+        <section class="about">
+            <article>
+            <h2>About</h2>
+                <p>For the last few of years at my current company, I worked as a QA Tester for a digital transformation project.</p>
+                <p>The experience led me to an interest in UX, and from there I started to learn to code.</p>
+                <p>Although a departure from studying music, I find that there are parallels in that both are abstract forms of language.</p>
+                <p>Fundamentally, I get bored if I'm not learning new things, so coding seems like the ideal career in which to do so!</p>
+            </article>
 
-        <section class="contact-wrapper split-three">
-
-            <div class="contact">
-            </div>
-
-            <div class="contact">
-                <h2 class="page-header contact-header">Contact</h2>
-            </div>
-
-            <div class="contact">
-                <p class="contact-text">Feel free to contact me or browse my Github and CV using the links across.</p>
-            </div>
-
-            <div class="contact">
-                <ul class="contact-link-images">
+            <article>
+                <h2>Contact</h2>
+                <ul class="contact-links">
                     <li>
-                        <img src="https://img.icons8.com/android/96/000000/linkedin.png" alt="LinkedIn icon" class="contact-link"/>
-                    </li>
-
-                    <li>
-                        <a href="https://github.com/matthewjchurch" alt="Link to GitHub" target="_blank">
-                            <img src="https://img.icons8.com/material-outlined/96/000000/github.png" alt="GitHub icon" class="contact-link"/>
+                        <a href="" alt="Link to GitHub" target="_blank">
+                            <i class="fab fa-linkedin-in"></i>
                         </a>
                     </li>
 
                     <li>
-                        <a href="Matthew Church - CV.pdf" alt="Link to download CV" target="_blank">
-                            <img src="https://img.icons8.com/material-rounded/96/000000/open-resume.png" alt="CV icon" class="contact-link"/>
+                        <a href="https://github.com/matthewjchurch" alt="Link to GitHub" target="_blank">
+                            <i class="fab fa-github-square"></i>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./assets/Matthew Church - CV.pdf" alt="Link to download CV" target="_blank">
+                            <i class="fas fa-user"></i>
                         </a>
                     </li>
 
                     <li>
                         <a href="mailto: matthewjchurch@gmail.com" alt="Click to email me" target="_blank">
-                            <img src="https://img.icons8.com/fluent-systems-filled/96/000000/email-open.png" alt="Email icon" class="contact-link">
+                            <i class="fas fa-envelope-open-text"></i>
                         </a>
                     </li>
                 </ul>
-            </div>
-        
-            <div class="contact">
-
-            </div>
-
-            <div class="contact">
-
-            </div>
+            </article>
+            <footer>
+                
+            </footer>
         </section>
-
-        <script src="app.js"></script>
-    </body>
+    </main>
+    
+    <script>
+		ScrollReveal().reveal('.card-container')
+    </script>
+    <script src="app.js"></script>
+</body>
 </html>

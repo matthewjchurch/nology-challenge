@@ -1,0 +1,151 @@
+// Colors
+
+$white: #E0FBFC;
+$blue: #293241;
+$black: #04060C;
+$orange: #EE6C4D;
+$green: #1A595C;
+$purple: #6855AC;
+
+// Fonts
+
+$header-font: 'Montserrat', sans-serif;
+$body-font: 'IBM Plex Sans', sans-serif;
+
+// Margin/padding
+
+$section-padding: 12%;
+$margin-small: 15px 20px;
+$margin-large: 20px 30px;
+$y-margin-small: 20px 0;
+$y-margin-large: 30px 0;
+$x-margin-small: 0 20px;
+$x-margin-large: 0 30px;
+
+// Breakpoints
+
+$phone: 360px;
+$tablet: 576px;
+$desktop: 768px;
+$large-screen: 992px;
+
+// Mixins and inheritance
+
+%modal-properties {
+    visibility: hidden;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100vh;
+    overflow: visible;
+    background-color: rgba(4, 6, 12, 0.6);
+    z-index: 5;
+}
+
+@mixin overlay-properties {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: #293241;
+    border-radius: 10px;
+    opacity: 0%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all .2s;
+
+    &:hover {
+        opacity: 90%;
+        cursor: pointer;
+    }
+}
+
+@mixin card-behaviour {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  
+    .card {
+        position: relative;
+        width: 100%;
+        height: 40%;
+        background-color: $blue;
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: 4px 4px 9px 2px rgba(4,6,12,0.3);
+  
+        i {
+            color: $white;
+            opacity: 1;
+            -webkit-transform: scale(1);
+            transform: scale(1);
+        }
+        
+        h3 {
+            z-index: 3;
+            text-align: left;
+            font-family: $header-font;
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            color: $white;
+            background: transparent;
+        }
+    
+        .fa-play-circle {
+            z-index: 4;
+            position: absolute;
+            right: 5%;
+            bottom: 45%;
+            font-size: 40px;
+            cursor: pointer;
+        }
+        
+        p {
+            z-index: 3;
+            position: absolute;
+            bottom: 5%;
+            right: 7%;
+            color: transparent;
+            font-weight: bold;
+            writing-mode: vertical-lr;
+            -webkit-transition: all 0.2s ease;
+            transition: all 0.2s ease;
+        }
+        
+        .pic {
+            z-index: 100;
+            width: 100%;
+            height: 400px;
+            opacity: 50%;
+
+            video {
+                object-fit: cover;
+            }
+        }
+    
+        button {
+            position: absolute;
+            right: 5%;
+            bottom: 10%;
+            width: 30px;
+            height: 30px;
+            background-color: transparent;
+            border: none;
+            border-radius: 30px;
+            outline: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+    }
+}

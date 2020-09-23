@@ -1,0 +1,61 @@
+//Fonts
+
+h1, h2, h3, h4 {
+    font-family: $header-font;
+    color: $white;
+}
+
+h1 {
+    font-size: 3.8rem;
+    text-align: right;
+}
+
+h2, h3 {
+    text-align: center;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.25rem;
+}
+
+h3 {
+    font-size: 1.6rem;
+    width: 100%;
+    background-color: $blue;
+}
+
+h4 {
+    font-size: 1.25rem;
+}
+
+p {
+    font-family: $body-font;
+    font-size: 0.8rem;
+    font-weight: 300;
+    color: $white;
+    margin: 10px 0;
+}
+
+// Other elements
+
+img {
+    max-width: 100%;
+    opacity: 80%;
+}
+
+ul {
+    list-style-type: none;
+    font-size: 3.125rem;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+    li {
+        margin: 1rem;
+    }
+}
+
+a {
+    color: $white;
+}
