@@ -120,6 +120,7 @@ div.card-container .card .pic {
 }
 div.card-container .card .pic video {
   object-fit: cover;
+  object-position: top;
 }
 div.card-container .card button {
   position: absolute;
