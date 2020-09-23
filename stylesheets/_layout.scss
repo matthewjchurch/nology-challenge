@@ -24,7 +24,7 @@ body {
 
 ::-webkit-scrollbar-thumb {
     background: $black;
-  }
+}
 
 section {
     padding: $section-padding;
@@ -74,7 +74,7 @@ section.project-one {
 }
 
 section.project-two {
-    background-image: linear-gradient(to bottom, $green, $purple);
+    background-image: linear-gradient(to bottom, $green, $purple, $blue);
 }
 
 section.project-three {

@@ -24,7 +24,31 @@
     }
 
     h1 {
-        font-size: clamp(5rem, 10vw, 5.4rem);
+        font-size: max(6.5vw, 6.5rem);
+    }
+
+    h2 {
+        font-size: max(2.5vw, 2.5rem);
+    }
+
+    h3, h4 {
+        font-size: max(1.8vw, 1.8rem);
+    }
+
+    p {
+        font-size: max(1vw, 1rem);
+    }
+    
+    .landing-page p, .about p {
+        font-size: max(1.2vw, 1.2rem);
+    }
+
+    section.project-one {
+        background-image: linear-gradient(to bottom, $blue, $orange, $green);
+    }
+    
+    section.project-two {
+        background-image: linear-gradient(to bottom, $green, $purple, $blue);
     }
 
     .card-container .card {
@@ -93,10 +117,6 @@
         }
     }
 
-    section.project-one {
-        background-image: linear-gradient(to bottom, $orange, $green);
-    }
-
     .desktop.modal-container {
         visibility: hidden;
 
@@ -142,12 +162,5 @@
             justify-content: flex-end;
             margin: $y-margin-large;
         }
-    }
-}
-
-
-@media only screen and (min-width: $large-screen) {
-    h1 {
-        font-size: clamp(6rem, 8vw, 7rem);
     }
 }
