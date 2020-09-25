@@ -309,6 +309,14 @@ footer {
     font-size: max(1vw, 1rem);
   }
 
+  i {
+    transition: all 0.3s;
+  }
+  i:hover {
+    opacity: 80%;
+    transform: scale(1.05);
+  }
+
   .landing-page p, .about p {
     font-size: max(1.2vw, 1.2rem);
   }
