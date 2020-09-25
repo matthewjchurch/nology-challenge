@@ -291,6 +291,11 @@ footer {
   background-color: transparent;
 }
 
+@media only screen and (min-width: 360px) {
+  p {
+    font-size: 1rem;
+  }
+}
 @media only screen and (min-width: 576px) {
   .card-container {
     max-width: 70%;
