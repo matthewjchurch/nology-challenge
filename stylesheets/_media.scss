@@ -38,11 +38,15 @@
     }
 
     section.project-one {
-        background-image: linear-gradient(to bottom, $blue, $orange, $green);
+        background-image: linear-gradient(to bottom, $blue, $orange);
     }
     
     section.project-two {
-        background-image: linear-gradient(to bottom, $green, $purple, $blue);
+        background-image: linear-gradient(to bottom, $orange, $green);
+    }
+
+    section.project-three {
+        background-image: linear-gradient(to bottom, $green, $blue);
     }
 
     .card-container .card {

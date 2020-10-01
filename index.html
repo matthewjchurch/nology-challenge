@@ -6,10 +6,10 @@
     <title>Matt Church - Portfolio page</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;500&family=Montserrat:wght@600&display=swap" rel="stylesheet">
-    <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png">
-    <link rel="manifest" href="./assets/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="./assets/favicon/site.webmanifest">
     <script src="https://unpkg.com/scrollreveal@4"></script>
 	<script>
 		ScrollReveal({ duration: 1000 })
@@ -84,6 +84,54 @@
             <section class="project-two project">
                 <div class="mobile modal-container">
                     <article>
+                        <h4>Tetris</h4>
+                        <p>Built over the course of my third week at _nology</p>
+                        <p>I took an object-oriented approach to this, with just two classes controlling the gameplay.</p>
+                        <p>Two separate interval functions control the pieces falling and the increase in speed.</p>
+                        <p>Each type of tetromino has a different rotation matrix which maps over the game board.</p>
+                        <ul class="project-links-ul">
+                            <li>
+                                <a href="https://github.com/matthewjchurch/tetris" alt="Link to tetris project" target="_blank">
+                                    <i class="fab fa-github-square"></i>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="https://tetris.mattchurch.dev" target="_blank">
+                                    <i class="far fa-window-maximize"></i>
+                                </a>
+                            </li>
+                        </ul>
+                        <button>close</button>
+                    </article>
+                </div>
+
+                <div class="project-main">
+                    <div class="card-container project-two">
+                        <div class="card project-two">
+                            <h3 class="project-two">Tetris</h3>
+                            <i class="fas fa-play-circle project-two"></i>
+                            <p class="project-two">Click to see</p>
+                            <div class="pic project-two">
+                                <video height="100%" width="100%" autoplay loop muted>
+                                    <source src="assets/tetris-video.mp4">
+                                </video>
+                            </div>
+                            <button class="project-two">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="desktop modal-container">
+                    <i class="fas fa-times"></i>
+                    <iframe src="https://tetris.mattchurch.dev" frameborder="0"></iframe>
+                </div>
+            </section>
+
+            <section class="project-three project">
+                <div class="mobile modal-container">
+                    <article>
                         <h4>Calculator</h4>
                         <p>The first Javascript project I built during my time at _nology.</p>
                         <p>It can currently handle up to 12 digits precision, and should avoid basic floating point errors.</p>
@@ -106,17 +154,17 @@
                 </div>
 
                 <div class="project-main">
-                    <div class="card-container project-two">
-                        <div class="card project-two">
-                            <h3 class="project-two">Calculator</h3>
-                            <i class="fas fa-play-circle project-two"></i>
-                            <p class="project-two">Click to see</p>
-                            <div class="pic project-two">
+                    <div class="card-container project-three">
+                        <div class="card project-three">
+                            <h3 class="project-three">Calculator</h3>
+                            <i class="fas fa-play-circle project-three"></i>
+                            <p class="project-three">Click to see</p>
+                            <div class="pic project-three">
                                 <video height="100%" width="100%" autoplay loop muted>
                                     <source src="assets/calculator-video.mp4">
                                 </video>
                             </div>
-                            <button class="project-two">
+                            <button class="project-three">
                             </button>
                         </div>
                     </div>
@@ -127,49 +175,6 @@
                     <iframe src="https://calculator.mattchurch.dev" frameborder="0"></iframe>
                 </div>
             </section>
-
-            <!-- <section class="project-three project">
-                <div class="mobile modal-container">
-                    <article>
-                        <p>One of the first projects I built in preparation of the course.</p>
-                        <p>I used a constructor method to add classes to each beat, and built functions to visually
-                        represent the flow of each beat relative to the chosen tempo.</p>
-                        <p>Clicking on a beat adds an active class, which means the relevant sound will play when reached in the flow.</p>
-                        <ul class="project-links-ul">
-                            <li>
-                                <a href="https://github.com/matthewjchurch/drummachine" alt="Link to drum machine project" target="_blank">
-                                    <i class="fab fa-github-square"></i>
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="https://matthewjchurch.github.io/drummachine/" target="_blank">
-                                    <i class="far fa-window-maximize"></i>
-                                </a>
-                            </li>
-                        </ul>
-                        <button>close</button>
-                    </article>
-                </div>
-
-                <div class="project-main">
-                    <div class="card-container project-three">
-                        <div class="card project-three">
-                            <h3 class="project-three">Drum machine</h3>
-                            <i class="fas fa-play-circle project-three"></i>
-                            <p class="project-three">Click to see</p>
-                            <div class="pic project-three"></div>
-                            <button class="project-three">
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="desktop modal-container">
-                    <i class="fas fa-times"></i>
-                    <iframe src="https://streamable.com/e/shil2" frameborder="0"></iframe>
-                </div>
-            </section> -->
         </section>
 
         <section class="about">
