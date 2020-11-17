@@ -46,7 +46,11 @@
     }
 
     section.project-three {
-        background-image: linear-gradient(to bottom, $green, $blue);
+        background-image: linear-gradient(to bottom, $green, $purple);
+    }
+
+    section.project-four {
+        background-image: linear-gradient(to bottom, $purple, $blue);
     }
 
     .card-container .card {

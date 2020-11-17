@@ -62,7 +62,7 @@ section {
 
 .projects-intro {
     height: 300vh;
-    background-image: linear-gradient(to bottom, $black 40%, $blue 70%, $orange 100%);
+    background-image: linear-gradient(to bottom, $black, $blue);
 }
 
 .project {
@@ -71,14 +71,18 @@ section {
 }
 
 section.project-one {
-    background-image: linear-gradient(to bottom, $orange, $green);
+    background-image: linear-gradient(to bottom, $blue, $orange);
 }
 
 section.project-two {
-    background-image: linear-gradient(to bottom, $green, $purple, $blue);
+    background-image: linear-gradient(to bottom, $orange, $green);
 }
 
 section.project-three {
+    background-image: linear-gradient(to bottom, $green, $purple);
+}
+
+section.project-four {
     background-image: linear-gradient(to bottom, $purple, $blue);
 }
 

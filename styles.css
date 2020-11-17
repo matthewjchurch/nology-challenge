@@ -255,7 +255,7 @@ section > * {
 
 .projects-intro {
   height: 300vh;
-  background-image: linear-gradient(to bottom, #04060C 40%, #293241 70%, #EE6C4D 100%);
+  background-image: linear-gradient(to bottom, #04060C, #293241);
 }
 
 .project {
@@ -264,14 +264,18 @@ section > * {
 }
 
 section.project-one {
-  background-image: linear-gradient(to bottom, #EE6C4D, #1A595C);
+  background-image: linear-gradient(to bottom, #293241, #EE6C4D);
 }
 
 section.project-two {
-  background-image: linear-gradient(to bottom, #1A595C, #6855AC, #293241);
+  background-image: linear-gradient(to bottom, #EE6C4D, #1A595C);
 }
 
 section.project-three {
+  background-image: linear-gradient(to bottom, #1A595C, #6855AC);
+}
+
+section.project-four {
   background-image: linear-gradient(to bottom, #6855AC, #293241);
 }
 
@@ -335,7 +339,11 @@ footer {
   }
 
   section.project-three {
-    background-image: linear-gradient(to bottom, #1A595C, #293241);
+    background-image: linear-gradient(to bottom, #1A595C, #6855AC);
+  }
+
+  section.project-four {
+    background-image: linear-gradient(to bottom, #6855AC, #293241);
   }
 
   .card-container .card .pic {
