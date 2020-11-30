@@ -23,7 +23,7 @@ const projectsFade = () => {
 }
 
 const openModal = (e) => {
-    const classes = ["project-one", "project-two", "project-three"];
+    const classes = ["project-one", "project-two", "project-three", "project-four"];
     let givenClass;
     let modal;
 
