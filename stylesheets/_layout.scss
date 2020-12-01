@@ -71,18 +71,22 @@ section {
 }
 
 section.project-one {
-    background-image: linear-gradient(to bottom, $blue, $orange);
+    background-image: linear-gradient(to bottom, $blue, $purple);
 }
 
 section.project-two {
-    background-image: linear-gradient(to bottom, $orange, $green);
+    background-image: linear-gradient(to bottom, $purple, $orange);
 }
 
 section.project-three {
-    background-image: linear-gradient(to bottom, $green, $purple);
+    background-image: linear-gradient(to bottom, $orange, $green);
 }
 
 section.project-four {
+    background-image: linear-gradient(to bottom, $green, $purple);
+}
+
+section.project-five {
     background-image: linear-gradient(to bottom, $purple, $blue);
 }
 

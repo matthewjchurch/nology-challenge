@@ -264,18 +264,22 @@ section > * {
 }
 
 section.project-one {
-  background-image: linear-gradient(to bottom, #293241, #EE6C4D);
+  background-image: linear-gradient(to bottom, #293241, #6855AC);
 }
 
 section.project-two {
-  background-image: linear-gradient(to bottom, #EE6C4D, #1A595C);
+  background-image: linear-gradient(to bottom, #6855AC, #EE6C4D);
 }
 
 section.project-three {
-  background-image: linear-gradient(to bottom, #1A595C, #6855AC);
+  background-image: linear-gradient(to bottom, #EE6C4D, #1A595C);
 }
 
 section.project-four {
+  background-image: linear-gradient(to bottom, #1A595C, #6855AC);
+}
+
+section.project-five {
   background-image: linear-gradient(to bottom, #6855AC, #293241);
 }
 
@@ -331,18 +335,22 @@ footer {
   }
 
   section.project-one {
-    background-image: linear-gradient(to bottom, #293241, #EE6C4D);
+    background-image: linear-gradient(to bottom, #293241, #6855AC);
   }
 
   section.project-two {
-    background-image: linear-gradient(to bottom, #EE6C4D, #1A595C);
+    background-image: linear-gradient(to bottom, #6855AC, #EE6C4D);
   }
 
   section.project-three {
-    background-image: linear-gradient(to bottom, #1A595C, #6855AC);
+    background-image: linear-gradient(to bottom, #EE6C4D, #1A595C);
   }
 
   section.project-four {
+    background-image: linear-gradient(to bottom, #1A595C, #6855AC);
+  }
+
+  section.project-five {
     background-image: linear-gradient(to bottom, #6855AC, #293241);
   }
 
